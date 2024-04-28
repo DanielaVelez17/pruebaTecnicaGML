@@ -1,0 +1,25 @@
+<nav class="sidebar" [ngClass]="{'active': sidebarOpen}">
+    <button type="button" class="btn btn-outline-light d-lg-none toggle-button btn-menu" (click)="toggleSidebar()">
+        <i class="fas fa-bars fa-2x"></i>
+    </button>
+    <div class="sidebar-header">
+        <!--<h3>Menú</h3>-->
+    </div>
+
+    <ul class="list-unstyled components">
+        <li>
+            <a routerLink="clients" (click)="closeSidebar()">
+                <i class="fas fa-user"></i>
+                Clients</a>
+        </li>
+        <li>
+            <a (click)="closeSidebar()">Client look history</a>
+        </li>
+        <li>
+            <a (click)="closeSidebar()">Emergency PIN configuration</a>
+        </li>
+        <li>
+            <a (click)="closeSidebar()">Emergency PIN history</a>
+        </li>
+    </ul>
+</nav>

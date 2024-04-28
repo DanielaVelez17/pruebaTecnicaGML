@@ -1,0 +1,28 @@
+.form {
+    background-color: #a9c9d8;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.form-data {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    margin-top: 5%;
+}
+
+.button-container button {
+    width: 100px;
+    margin-right: 10px;
+}

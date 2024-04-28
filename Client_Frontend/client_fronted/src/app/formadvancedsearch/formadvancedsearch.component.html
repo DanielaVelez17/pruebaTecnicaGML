@@ -1,0 +1,34 @@
+<div class="form" *ngIf="openForm">
+    <div>
+        <form>
+            <div class="form-group form-data">
+                <label for="businessId">Name</label>
+                <input type="text" class="form-control" placeholder="Name" name="name" [(ngModel)]="form.business_id"
+                    maxlength="18">
+            </div>
+            <div class="form-group form-data">
+                <label for="phone">Phone</label>
+                <input type="number" class="form-control" placeholder="Phone" name="phone" [(ngModel)]="form.phone">
+            </div>
+            <div class="form-group form-data">
+                <label for="emailAddress">E-mail</label>
+                <input type="email" class="form-control" placeholder="Email" name="email" [(ngModel)]="form.email"
+                    maxlength="18">
+            </div>
+            <div class="form-group form-data">
+                <label for="emailAddress">Start date</label>
+                <input type="date" class="form-control" name="date" [(ngModel)]="form.date">
+            </div>
+            <div class="form-group form-data">
+                <label for="emailAddress">End date</label>
+                <input type="date" class="form-control" name="date2" [(ngModel)]="form.date2">
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="btn btn-primary" (click)="onSubmit()">OK</button>
+                <button class="btn btn-primary" (click)="onCancel()">Cancel</button>
+            </div>
+            
+        </form>
+    </div>
+</div>

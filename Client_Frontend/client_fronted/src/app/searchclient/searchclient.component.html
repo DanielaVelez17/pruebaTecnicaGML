@@ -1,0 +1,9 @@
+<form class="search-form">
+    <input type="text" placeholder="Enter shared key" [(ngModel)]="client.sharedKey" name="sharedKey">
+    <button type="button" class="btn btn-light" type="submit" (click)="onSubmit()">Search</button>
+    <button (click)="toggleForm()" type="button" class="btn btn-primary btn-avanced-search">
+        Advanced Search</button>
+</form>
+<div *ngIf="openForm">
+    <app-formadvancedsearch></app-formadvancedsearch>
+</div>

@@ -1,0 +1,26 @@
+<div class="main-container">
+
+  <div class="wrapper sidebar">
+    <app-sidebar></app-sidebar>
+    <div id="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <div class="right-container">
+    <div class="button-container">
+      <app-buttoncreateclient></app-buttoncreateclient>
+      <app-buttonexport></app-buttonexport>
+    </div>
+    <div class="form-button-container">
+      <app-searchclient></app-searchclient>
+    </div>
+
+
+    <div class="list-clients">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+
+</div>

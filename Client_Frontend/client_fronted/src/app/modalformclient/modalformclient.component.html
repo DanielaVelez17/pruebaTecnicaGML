@@ -1,0 +1,64 @@
+<div class="window">
+
+
+  <div class="modal-header">
+    <h5 class="modal-title">Create New Client</h5>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="form">
+      <div class="form-group">
+        <label for="sharedKet">Shared Key <span *ngIf="isRequired('sharedKey')">*</span></label>
+        <input type="text" class="form-control" placeholder="Shared Key" [(ngModel)]="client.sharedKey" name="sharedKey"
+          formControlName="sharedKey"
+          [class.is-invalid]="form.get('sharedKey')?.invalid && (form.get('sharedKey')?.dirty || form.get('sharedKey')?.touched)"
+          maxlength="18">
+        <div class="invalid-feedback"
+          *ngIf="form.get('sharedKey')?.errors && (form.get('sharedKey')?.dirty || form.get('sharedKey')?.touched)">
+          <div *ngIf="form.get('sharedKey')?.errors?.['required']">Shared Key is required</div>
+          <div *ngIf="form.get('sharedKey')?.errors?.['pattern']">Special characters are not allowed</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="businessId">Business ID <span *ngIf="isRequired('businessId')">*</span></label>
+        <input type="text" class="form-control" placeholder="Business ID" [(ngModel)]="client.businessId"
+          name="businessId" formControlName="businessId"
+          [class.is-invalid]="form.get('businessId')?.invalid && (form.get('businessId')?.dirty || form.get('businessId')?.touched)"
+          maxlength="48">
+        <div class="invalid-feedback"
+          *ngIf="form.get('businessId')?.errors && (form.get('businessId')?.dirty || form.get('businessId')?.touched)">
+          <div *ngIf="form.get('businessId')?.errors?.['required']">Business ID is required</div>
+          <div *ngIf="form.get('businessId')?.errors?.['pattern']">Special characters are not allowed</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="emailAddress">Email address <span *ngIf="isRequired('email')">*</span></label>
+        <input type="email" class="form-control" placeholder="Enter email" [(ngModel)]="client.email" name="email"
+          formControlName="email"
+          [class.is-invalid]="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)"
+          maxlength="48">
+        <div class="invalid-feedback"
+          *ngIf="form.get('email')?.errors && (form.get('email')?.dirty || form.get('email')?.touched)">
+          <div *ngIf="form.get('email')?.errors?.['required']">Email is required</div>
+          <div *ngIf="form.get('email')?.errors?.['email']">The email must have a valid format</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone <span *ngIf="isRequired('phone')">*</span></label>
+        <input type="number" class="form-control" placeholder="Phone" [(ngModel)]="client.phone" name="phone"
+          formControlName="phone"
+          [class.is-invalid]="form.get('phone')?.invalid && (form.get('phone')?.dirty || form.get('phone')?.touched)">
+        <div class="invalid-feedback"
+          *ngIf="form.get('phone')?.errors && (form.get('phone')?.dirty || form.get('phone')?.touched)">
+          <div *ngIf="form.get('phone')?.errors?.['required']">Number is required</div>
+          <div *ngIf="form.get('phone')?.errors?.['pattern']">The phone must be numeric</div>
+        </div>
+      </div>
+      <div class="button-container">
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="form.invalid">OK</button>
+      </div>
+    </form>
+  </div>
+</div>

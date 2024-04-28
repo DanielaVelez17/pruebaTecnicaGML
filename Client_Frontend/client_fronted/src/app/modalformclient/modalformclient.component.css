@@ -1,0 +1,54 @@
+.is-invalid {
+    border: 1px solid #dc3545;
+}
+
+.invalid-feedback {
+    color: #dc3545;
+}
+
+label>span {
+    color: red;
+    margin-left: 5px;
+}
+
+.close {
+    margin: 10px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    margin-top: 5%;
+}
+
+.button-container button {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.modal-body .form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+}
+
+.window {
+    background-color: #a9c9d8;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
